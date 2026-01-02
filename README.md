@@ -1,6 +1,6 @@
-# Next.js + Prisma + PostgreSQL サンプルアプリケーション
+# Next.js + Prisma + MariaDB サンプルアプリケーション
 
-Next.js 16、Prisma、PostgreSQLを使用したフルスタックWebアプリケーションのサンプルプロジェクトです。ユーザー管理と投稿管理の基本的なCRUD操作を実装しています。
+Next.js 16、Prisma、MariaDBを使用したフルスタックWebアプリケーションのサンプルプロジェクトです。ユーザー管理と投稿管理の基本的なCRUD操作を実装しています。
 
 ## 🎯 概要
 
@@ -20,7 +20,7 @@ Next.js 16、Prisma、PostgreSQLを使用したフルスタックWebアプリケ
 - **Next.js 16** - React App Router、Server Components
 - **TypeScript** - 完全な型安全性
 - **Prisma 7** - 次世代ORM、型安全なデータベースクライアント
-- **PostgreSQL** - リレーショナルデータベース
+- **MariaDB** - 高性能なリレーショナルデータベース
 - **Tailwind CSS 4** - ユーティリティファーストCSS
 - **pnpm** - 高速パッケージマネージャー
 
@@ -49,7 +49,7 @@ Next.js 16、Prisma、PostgreSQLを使用したフルスタックWebアプリケ
 
 ```bash
 git clone <repository-url>
-cd next-postgres-sample
+cd next16-mariadb-sample
 ```
 
 ### 2. 依存関係をインストール
@@ -60,7 +60,7 @@ pnpm install
 
 ### 3. 環境変数を設定
 
-`.env.example` をコピーして `.env` ファイルを作成し、PostgreSQL の接続文字列を設定してください:
+`.env.example` をコピーして `.env` ファイルを作成し、MariaDB の接続文字列を設定してください:
 
 ```bash
 cp .env.example .env
@@ -69,12 +69,12 @@ cp .env.example .env
 `.env` ファイルを編集:
 
 ```env
-DATABASE_URL="postgresql://username:password@localhost:5432/database_name?schema=public"
+DATABASE_URL="mysql://username:password@localhost:3306/database_name"
 ```
 
 **ローカル開発の例:**
 ```env
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/prisma_sample?schema=public"
+DATABASE_URL="mysql://root:password@localhost:3306/next16_mariadb_sample"
 ```
 
 ### 4. Prismaクライアントを生成
@@ -220,7 +220,7 @@ F5キーまたは「実行とデバッグ」から以下の構成を選択でき
 ## 📁 プロジェクト構造
 
 ```
-next-postgres-sample/
+next16-mariadb-sample/
 ├── .vscode/
 │   └── launch.json              # VS Code デバッグ設定
 ├── prisma/
@@ -313,7 +313,7 @@ pnpm db:seed            # サンプルデータを投入
 - [Prisma Documentation](https://www.prisma.io/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [TypeScript Documentation](https://www.typescriptlang.org/docs)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs)
+- [MariaDB Documentation](https://mariadb.com/kb/en/documentation/)
 
 ## 📝 ライセンス
 
